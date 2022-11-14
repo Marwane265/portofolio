@@ -1,0 +1,13 @@
+.imagecontainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.imagecontainer2 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.downloadbutton {
+  font-family: "Burtons";
+}

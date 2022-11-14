@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -15,12 +19,71 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@font-face {
+  font-family: "burtons";
+  src: url("../public/Burtons.otf");
+}
+@layer components {
+  .imgWrapper {
+    display: grid;
+    grid-column: 1fr 1fr ;
+    grid-row: auto;
+    gap: 40px;
+    padding: 0px 40px 0px 40px;
   }
-  body {
+  .download-button {
+    width: 200px;
+  }
+  .contactInput {
+    @apply mt-1 block w-full px-6 py-4 rounded-md border-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm
+  }
+  .form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 400px;
+    font-size: 16px;
+  }
+  .label {
+    margin-top: 1rem;
+    font-family: "burtons";
+  }
+  .input {
+    width: 100%;
+      height: 35px;
+      padding: 7px;
+      outline: none;
+      border-radius: 5px;
+      border: 1px solid rgb(220, 220, 220);
+  }
+  .input:focus {
+    border: 2px solid rgba(0, 206, 158, 1);
+  }
+  .input[type="submit"] {
+    margin-top: 2rem;
+    cursor: pointer;
+    background: rgb(13 148 136);
     color: white;
-    background: black;
+    border: none;
+    font-family: "burtons";
   }
+  .textArea {
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+    max-height: 100px;
+    min-height: 100px;
+    padding: 7px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgb(220, 220, 220);
+  }
+
+  .textArea:focus {
+    border: 2px solid rgba(0, 206, 158, 1);
+  }
+
+}
+hr.solid {
+  border-top: 3px solid rgb(0, 150, 136);
 }
