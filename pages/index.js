@@ -9,6 +9,7 @@ import amazonclone from "../public/amazonclone2.jpg";
 import weatherapp from "../public/weather.svg";
 import piano from "../public/piano.png";
 import Quizz from "../public/Quizz.jpg";
+import carousel from "../public/carousel.png";
 import Link from "next/link";
 import ContactMe from "./ContactMe";
 import avatar from "../public/3d-avatar-done.png";
@@ -38,6 +39,16 @@ export default function Home() {
               </button>
             </ul>
           </nav>
+
+          <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden  md:h-96 md:w-96">
+            <Image
+              src={avatar}
+              layout="fill"
+              objectFit="cover"
+              alt="avatar"
+              className="avatar"
+            />
+          </div>
           <div className="text-center p-10 py-10">
             <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl font-burtons">
               Lhoussni Marwane
@@ -65,15 +76,6 @@ export default function Home() {
                   <AiFillLinkedin />
                 </div>
               </a>
-            </div>
-            <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
-              <Image
-                src={avatar}
-                layout="fill"
-                objectFit="cover"
-                alt=""
-                className="avatar"
-              />
             </div>
           </div>
         </section>
@@ -122,6 +124,7 @@ export default function Home() {
           </div>
         </section>
         <section className="py-10">
+          <hr></hr>
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Portofolio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
@@ -134,7 +137,7 @@ export default function Home() {
             </p>
           </div>
           <div className="imgWrapper mt-5 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1 ">
+            <div className="basis-1/3 flex-1 ml-16">
               <Link
                 href="https://amazon-clone-react-marwane.netlify.app/"
                 target={"_blank"}
@@ -157,7 +160,7 @@ export default function Home() {
                 className="cursor-pointer"
               >
                 <Image
-                  className="rounded-lg object-cover w-[60%] block ml-auto mr-auto pt-16"
+                  className="rounded-lg object-cover w-[60%] block ml-auto mr-auto pt-16 mb-8"
                   width={"100%"}
                   height={"100%"}
                   layout="responsive"
@@ -200,7 +203,26 @@ export default function Home() {
                 />
               </Link>
             </div>
+            <div className="col-start-1 col-end-2 flex items-center">
+              <div className="p-14 transition-all hover:scale-110 duration-[0.5s]">
+                <Link
+                  href="caroussel-marwane.netlify.app"
+                  target={"_blank"}
+                  className="cursor-pointer flex justify-center"
+                >
+                  <Image
+                    className="rounded-lg object-cover w-[80%]"
+                    width={"100%"}
+                    height={"100%"}
+                    layout="responsive"
+                    src={carousel}
+                    alt=""
+                  />
+                </Link>
+              </div>
+            </div>
           </div>
+          <hr></hr>
           <ContactMe />
         </section>
       </main>
