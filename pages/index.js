@@ -10,6 +10,7 @@ import weatherapp from "../public/weather.svg";
 import piano from "../public/piano.png";
 import Quizz from "../public/Quizz.jpg";
 import carousel from "../public/carousel.png";
+import hangman from "../public/hangman.png";
 import Link from "next/link";
 import ContactMe from "./ContactMe";
 import avatar from "../public/3d-avatar-done.png";
@@ -78,16 +79,16 @@ export default function Home() {
               </a>
             </div>
           </div>
+          <hr></hr>
         </section>
         <section>
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Services I offer</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I am at the beginning of my journey, but I have created several
-              projects like
+              I am at the beginning of my journey,
               <span className="text-teal-500">
                 {" "}
-                the Amazon clone, a weather app and a piano (see below).
+                but i am ready to take on a challenge.
               </span>
             </p>
           </div>
@@ -128,12 +129,9 @@ export default function Home() {
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Portofolio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I am at the beginning of my journey, but I have created several
-              projects like
-              <span className="text-teal-500">
-                {" "}
-                the Amazon clone, a weather app and a piano (see below).
-              </span>
+              I am at the beginning of my journey, but I have made several
+              projects
+              <span className="text-teal-500"> which you can view below.</span>
             </p>
           </div>
           <div className="imgWrapper mt-5 lg:flex-row lg:flex-wrap">
@@ -206,7 +204,7 @@ export default function Home() {
             <div className="col-start-1 col-end-2 flex items-center">
               <div className="p-14 transition-all hover:scale-110 duration-[0.5s]">
                 <Link
-                  href="caroussel-marwane.netlify.app"
+                  href="https://caroussel-marwane.netlify.app"
                   target={"_blank"}
                   className="cursor-pointer flex justify-center"
                 >
@@ -221,9 +219,36 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+            <div className="col-start-2 col-end-3 flex items-center">
+              <div className="p-14 transition-all hover:scale-110 duration-[0.5s]">
+                <Link
+                  href="https://hangman-marwane.netlify.app"
+                  target={"_blank"}
+                  className="cursor-pointer flex justify-center"
+                >
+                  <Image
+                    className="rounded-lg object-cover w-[80%]"
+                    width={"100%"}
+                    height={"100%"}
+                    layout="responsive"
+                    src={hangman}
+                    alt=""
+                  />
+                </Link>
+              </div>
+            </div>
           </div>
           <hr></hr>
           <ContactMe />
+          <button
+            onClick={() => {
+              window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            }}
+            id="myBtn"
+            title="Go to top"
+          >
+            Top
+          </button>
         </section>
       </main>
     </div>
