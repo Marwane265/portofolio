@@ -5,7 +5,6 @@
 * {
   margin: 0;
   scroll-behavior: smooth;
- 
 }
 
 html,
@@ -92,21 +91,19 @@ a {
 hr.solid {
   border-top: 3px solid rgb(0, 150, 136);
 }
-#myBtn{
+#myBtn {
   background-color: rgb(0, 150, 136);
   color: white;
   width: 3vw;
   height: 3vw;
   border-radius: 3px;
   cursor: pointer;
- transition: all 1000ms;
+  transition: all 1000ms;
 }
-#myBtn:hover{
-  background:crimson;
-  
+#myBtn:hover {
+  background: crimson;
 }
-main{
+main {
   overflow: hidden;
-  background: orange!important;
-  width: 110%;
+  background: red !important;
 }

@@ -175,7 +175,7 @@ export default function Home() {
                   className="cursor-pointer flex justify-center"
                 >
                   <Image
-                    className="rounded-lg object-cover w-[80%]"
+                    className="rounded-lg object-cover"
                     width={"100%"}
                     height={"100%"}
                     layout="responsive"
