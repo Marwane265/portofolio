@@ -14,9 +14,18 @@ import hangman from "../public/hangman.png";
 import Link from "next/link";
 import ContactMe from "./ContactMe";
 import avatar from "../public/3d-avatar-done.png";
+import { useRouter } from "next/router";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
-
+  let router = useRouter();
+  let greeting =
+    router.locale === "en-US"
+      ? "Hello"
+      : router.locale === "fr"
+      ? "Bonjour"
+      : router.locale === "nl-NL"
+      ? "Hallo iedereen"
+      : "";
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -127,7 +136,7 @@ export default function Home() {
         <section className="py-10">
           <hr></hr>
           <div>
-            <h3 className="text-3xl py-1 dark:text-white ">Portofolio</h3>
+            <h3 className="text-3xl py-1 dark:text-white ">Portfolio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               I am at the beginning of my journey, but I have made several
               projects
@@ -192,7 +201,7 @@ export default function Home() {
                 className="cursor-pointer flex justify-center h-[100%] w-[100%]"
               >
                 <Image
-                  className="rounded-lg transition-all hover:scale-110 duration-[0.5s]"
+                  className="rounded-lg transition-all hover:scale-110 duration-[0.5s] h-72"
                   width={300}
                   height={300}
                   layout="responsive"
