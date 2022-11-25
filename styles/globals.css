@@ -108,4 +108,5 @@ hr.solid {
 main{
   overflow: hidden;
   background: red !important;
+  width: 110%;
 }
