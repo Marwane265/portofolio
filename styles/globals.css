@@ -107,4 +107,5 @@ hr.solid {
 }
 main{
   overflow: hidden;
+  background: red !important;
 }
