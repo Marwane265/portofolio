@@ -14,18 +14,9 @@ import hangman from "../public/hangman.png";
 import Link from "next/link";
 import ContactMe from "./ContactMe";
 import avatar from "../public/3d-avatar-done.png";
-import { useRouter } from "next/router";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
-  let router = useRouter();
-  let greeting =
-    router.locale === "en-US"
-      ? "Hello"
-      : router.locale === "fr"
-      ? "Bonjour"
-      : router.locale === "nl-NL"
-      ? "Hallo iedereen"
-      : "";
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -37,7 +28,12 @@ export default function Home() {
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between dark:text-white">
             <h1 className="font-burtons text-xl">DevelopedByMarwane</h1>
+
             <ul className="flex items-center">
+              <span className="bg-cyan-500 text- to-teal-500font-semibold mr-2 px-2.5 py-0.5 rounded dark:from-teal-500 ">
+                This website is being updated weekly 😀!
+              </span>
+
               <li>
                 <BsFillMoonStarsFill
                   onClick={() => setDarkMode(!darkMode)}
@@ -54,7 +50,7 @@ export default function Home() {
             <Image
               src={avatar}
               layout="fill"
-              objectFit="cover"
+              objectfit="cover"
               alt="avatar"
               className="avatar"
             />
@@ -64,7 +60,7 @@ export default function Home() {
               Lhoussni Marwane
             </h2>
             <h3 className="text-2xl py-2 dark:text-white md:text-3xl font-burtons">
-              Developer and designer.
+              <h1>Developer and Designer</h1>
             </h3>
 
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400 ">
@@ -88,6 +84,7 @@ export default function Home() {
               </a>
             </div>
           </div>
+
           <hr></hr>
         </section>
         <section>
@@ -248,7 +245,7 @@ export default function Home() {
             </div>
           </div>
           <hr></hr>
-          <ContactMe />
+          <ContactMe id="contactMe" />
           <button
             onClick={() => {
               window.scrollTo({ top: 0, left: 0, behavior: "smooth" });

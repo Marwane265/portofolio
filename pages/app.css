@@ -11,3 +11,20 @@
 .downloadbutton {
   font-family: "Burtons";
 }
+.btn {
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 188, 212),
+    rgb(0, 210, 195)
+  );
+  z-index: 999;
+  color: white;
+  padding: (40px);
+  border-radius: 5px;
+  width: 100px;
+  font-family: "Burtons";
+  letter-spacing: 1px;
+}
+#dropdownMenu1 {
+  left: 30vw;
+}

@@ -51,7 +51,7 @@ const Contact = () => {
   return (
     <main>
       <div className="flex flex-col items-center justify-center mt-28">
-        <h2 className="font-burtons my-5 text-2xl dark:text-white">
+        <h2 className="font-burtons my-5 text-2xl dark:text-white ">
           Contact Me
         </h2>
         <form className="form" ref={form} onSubmit={sendEmail}>
